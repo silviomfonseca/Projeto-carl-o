@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="widt=device-width, initial-scale=1.0">
+	<title>Starbucks Responsivo</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<section>
+		<div class="circle"></div>
+		<header>
+			<a href="#"><img src="img/logoStarbucks.png" class="logo"></a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		
+		<div class="main">
+			<div class="textBox">
+				<h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<a href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+				<img src="img/coffeDrinkGreen.png" class="Starbucks">
+			</div>
+		</div>
+
+		<ul class="drinks">
+			<li><img src="img/coffeDrinkGreen.png" onclick="slider('img/coffeDrinkGreen.png');changeColor('#017143')" ></li>
+			<li><img src="img/coffeDrinkPink.png" onclick="slider('img/coffeDrinkPink.png');changeColor('#ff05ff')"  ></li>
+			<li><img src="img/coffeDrinkRosa.png" onclick="slider('img/coffeDrinkRosa.png');changeColor('#ffb3b3')"  ></li>
+		</ul>
+
+		<ul class="sociais">
+			<li><a href="#"><img src="img/facebook.png"></a></li>
+			<li><a href="#"><img src="img/twitter.png"></a></li>
+			<li><a href="#"><img src="img/instagram.png"></a></li>
+
+		</ul>
+
+	</section>
+
+	<script>
+
+		function slider(anything){
+			document.querySelector('.Starbucks').src = anything
+		}
+
+		function changeColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+
+			const sociais = document.querySelector('.sociais');
+			sociais.style.background = color;
+
+			const main = document.querySelector('.main .textBox a');
+			main.style.background =color;
+
+			const textBox = document.querySelector('.textBox span');
+			textBox.style.color = color;
+
+		}
+
+		
+
+	</script>
+
+</body>
+</html>
